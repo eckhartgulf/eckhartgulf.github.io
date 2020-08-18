@@ -1745,9 +1745,9 @@ a {
   text-align: center;
 }
 .marketing h2 {
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 520;
   color:#61b81f;
-  font-weight: 700;
 
 }
 .marketing p {
@@ -1763,4 +1763,16 @@ a {
 .carousel {
   width:300px;
   height:300px;
+}
+
+.img-center {
+  padding-top: 10px;
+  margin:0 auto;
+}
+.card{
+ background: rgb(232, 255, 240);
+}
+.card-deck
+{ 
+  width: 100%;
 }
