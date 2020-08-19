@@ -421,7 +421,7 @@ a {
         -o-transition: .3s all ease;
         transition: .3s all ease; }
         .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close span:hover {
-          color: #e4e7f5; }
+          color: #000000; }
     .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo {
       float: left;
       margin-top: 10px;
@@ -429,7 +429,7 @@ a {
       .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo a {
         display: inline-block;
         text-transform: uppercase;
-        color: rgb(255, 255, 255);
+        color: rgb(2, 2, 2);
         letter-spacing: .2em;
         font-size: 22px;
         font-weight: 900; }
@@ -451,7 +451,7 @@ a {
       padding: 10px 20px;
       display: block;
       position: relative;
-      color: #d7e3ee; }
+      color: #000000; }
       .site-mobile-menu .site-nav-wrap a:hover {
         color: #1B5E20; }
     .site-mobile-menu .site-nav-wrap li {
