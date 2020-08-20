@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 20/08/2020 09:41
+    Creation date: 20/08/2020 10:57
     */
 
     @font-face {
@@ -37,16 +37,24 @@
   font-smoothing: antialiased;
     }
 
-    .flaticon-ruler:before { content: "\f100"; }
-.flaticon-dry:before { content: "\f101"; }
-.flaticon-24-hours:before { content: "\f102"; }
-.flaticon-tape-measure:before { content: "\f103"; }
-.flaticon-water-proof:before { content: "\f104"; }
-.flaticon-checklist:before { content: "\f105"; }
+    .flaticon-tape-measure:before { content: "\f100"; }
+.flaticon-ruler:before { content: "\f101"; }
+.flaticon-fast-dry:before { content: "\f102"; }
+.flaticon-water-proof:before { content: "\f103"; }
+.flaticon-feather:before { content: "\f104"; }
+.flaticon-24-hours:before { content: "\f105"; }
+.flaticon-quill:before { content: "\f106"; }
+.flaticon-point:before { content: "\f107"; }
+.flaticon-checklist:before { content: "\f108"; }
+.flaticon-dry:before { content: "\f109"; }
     
-    $font-Flaticon-ruler: "\f100";
-    $font-Flaticon-dry: "\f101";
-    $font-Flaticon-24-hours: "\f102";
-    $font-Flaticon-tape-measure: "\f103";
-    $font-Flaticon-water-proof: "\f104";
-    $font-Flaticon-checklist: "\f105";
+    $font-Flaticon-tape-measure: "\f100";
+    $font-Flaticon-ruler: "\f101";
+    $font-Flaticon-fast-dry: "\f102";
+    $font-Flaticon-water-proof: "\f103";
+    $font-Flaticon-feather: "\f104";
+    $font-Flaticon-24-hours: "\f105";
+    $font-Flaticon-quill: "\f106";
+    $font-Flaticon-point: "\f107";
+    $font-Flaticon-checklist: "\f108";
+    $font-Flaticon-dry: "\f109";
