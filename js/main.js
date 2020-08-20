@@ -167,6 +167,12 @@ jQuery(document).ready(function($) {
 			}
 		})
 
+	$('.nav-link').on('click',function() {
+		if ( $('body').hasClass('offcanvas-menu') ) {
+			$('body').removeClass('offcanvas-menu');
+		}
+	});
+
 		$('body').on('click', '.js-menu-toggle', function(e) {
 			var $this = $(this);
 			e.preventDefault();
@@ -275,10 +281,6 @@ jQuery(document).ready(function($) {
 		})
 	};
 	searchShow();
-
-	$('.nav-link').on('click',function() {
-		$('.navbar-collapse').collapse('hide');
-	});
 
 	$('.nav-item').on('click',function(){
 
