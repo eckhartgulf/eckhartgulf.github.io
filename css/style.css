@@ -1918,7 +1918,7 @@ list-style: none;
   display: block;
   width: 80px;
   height: 80px;
-  background: rgb(44, 145, 51);
+  background: rgb(255, 21, 21);
   border-radius: 50%;
   animation: pulse-border 1500ms ease-out infinite;
 }
@@ -1933,7 +1933,7 @@ list-style: none;
   display: block;
   width: 80px;
   height: 80px;
-  background: rgb(44, 145, 51);
+  background: rgb(255, 21, 21);
   border-radius: 50%;
   transition: all 200ms;
 }
