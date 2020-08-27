@@ -1754,28 +1754,6 @@ a {
 {
 list-style: none;
 }
-.marketing li {
-    content: '';
-    display: inline-block;
-    height: 1em;
-    width: 1em;
-    background-image: url(http://placehold.it/32?text=fallback); 
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/93/Tango-bullet.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right:0.5em; 
-}
-.marketing li::before {
-    content: '';
-    display: inline-block;
-    height: 1em;
-    width: 1em;
-    background-image: url(http://placehold.it/32?text=fallback); 
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/93/Tango-bullet.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right:0.5em; 
-}
 
 .carousel {
   width:300px;
