@@ -303,5 +303,49 @@ jQuery(document).ready(function($) {
     win = window.open(mailto_link, 'emailWindow');
     if (win && win.open && !win.closed) win.close();
 	});
-	
+		$('#myButton1').click(function(){ //you can give id or class name here for $('button')
+		$(this).text(function(i,old){
+				return old=='view details' ?  'hide details' : 'view details';
+		});
+	});
+		$('#myButton2').click(function(){ //you can give id or class name here for $('button')
+		$(this).text(function(i,old){
+				return old=='view details' ?  'hide details' : 'view details';
+		});
+	});
+		$('#myButton3').click(function(){ //you can give id or class name here for $('button')
+		$(this).text(function(i,old){
+				return old=='view details' ?  'hide details' : 'view details';
+		});
+	});
+		$('#myButton4').click(function(){ //you can give id or class name here for $('button')
+		$(this).text(function(i,old){
+				return old=='view details' ?  'hide details' : 'view details';
+		});
+	});
+		$('#myButton5').click(function(){ //you can give id or class name here for $('button')
+		$(this).text(function(i,old){
+				return old=='view details' ?  'hide details' : 'view details';
+		});
+	});
+		$('#myButton6').click(function(){ //you can give id or class name here for $('button')
+		$(this).text(function(i,old){
+				return old=='view details' ?  'hide details' : 'view details';
+		});
+	});
+		$('#myButton7').click(function(){ //you can give id or class name here for $('button')
+		$(this).text(function(i,old){
+				return old=='view details' ?  'hide details' : 'view details';
+		});
+	});
+		$('#myButton8').click(function(){ //you can give id or class name here for $('button')
+		$(this).text(function(i,old){
+				return old=='view details' ?  'hide details' : 'view details';
+		});
+	});
+		$('#myButton9').click(function(){ //you can give id or class name here for $('button')
+		$(this).text(function(i,old){
+				return old=='view details' ?  'hide details' : 'view details';
+		});
+	});
 });

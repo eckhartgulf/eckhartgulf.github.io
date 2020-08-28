@@ -77,8 +77,20 @@ a {
     -ms-border-radius: 40px;
     border-radius: 40px;}
     .btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary:active {
-      border: 1px solid #ff8000;
+      border: 1px solid #000000;
       color: #fff; }
+      
+      .btn.btn-secondary2 {
+        background: rgb(255, 255, 255);
+        border: 1px solid #1B5E20;
+        color: #1B5E20; 
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        -ms-border-radius: 40px;
+        border-radius: 40px;}
+        .btn.btn-secondary2:hover, .btn.btn-secondary:focus, .btn.btn-secondary:active {      
+        border: 1px solid #1B5E20;
+          color: rgb(0, 0, 0); }
 
 .form-control {
   height: 43px; }
@@ -1937,4 +1949,18 @@ list-style: none;
   border-left: 32px solid #fff;
 	border-top: 22px solid transparent;
 	border-bottom: 22px solid transparent;
+}
+
+@media (min-width: 768px) {
+  .btn.btn-secondary2
+  {
+    pointer-events: none;
+    display: none;
+    content: "";
+  }
+  .collapse.dont-collapse-sm {
+    display: block;
+    height: auto !important;
+    visibility: visible;
+  }
 }
