@@ -348,6 +348,7 @@ jQuery(document).ready(function($) {
 				return old=='view details' ?  'hide details' : 'view details';
 		});
 	});
+
 	if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		$('.zoomit').elevateZoom({
 			easing : true,
@@ -355,5 +356,27 @@ jQuery(document).ready(function($) {
 			zoomWindowWidth:400,
       zoomWindowHeight:250
 		});
+	}
+	else
+	{
+			// Get the modal
+		var modal = document.getElementById("myModal");
+
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img = $('.zoomit');
+		var modalImg = $("#img1");
+		$('.zoomit').click(function(){
+				modal.style.display = "block";
+				var newSrc = this.src;
+				modalImg.attr('src', newSrc);
+		});
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { 
+			modal.style.display = "none";
+		}
 	}
 });
