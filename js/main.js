@@ -353,7 +353,7 @@ jQuery(document).ready(function($) {
 			easing : true,
 			zoomWindowPosition: 7,
 			zoomWindowWidth:400,
-      zoomWindowHeight:300
+      zoomWindowHeight:250
 		});
 	}
 });
