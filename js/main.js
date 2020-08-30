@@ -348,4 +348,7 @@ jQuery(document).ready(function($) {
 				return old=='view details' ?  'hide details' : 'view details';
 		});
 	});
+	if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$('.zoomit').elevateZoom({easing : true});
+	}
 });
