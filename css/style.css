@@ -1951,7 +1951,7 @@ list-style: none;
 	border-bottom: 22px solid transparent;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .btn.btn-secondary2
   {
     pointer-events: none;

@@ -349,6 +349,6 @@ jQuery(document).ready(function($) {
 		});
 	});
 	if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		$('.zoomit').elevateZoom({easing : true});
+		$('.zoomit').elevateZoom({easing : true,zoomWindowPosition: 7});
 	}
 });
