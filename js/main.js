@@ -356,12 +356,4 @@ jQuery(document).ready(function($) {
       zoomWindowHeight:300
 		});
 	}
-	else
-	{
-		$(".zoomit").elevateZoom({
-			zoomType				: "lens",
-			lensShape : "round",
-			lensSize    : 200
-		});
-	}
 });
