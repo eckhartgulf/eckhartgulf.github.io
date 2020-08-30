@@ -1967,7 +1967,7 @@ list-style: none;
   .zoomit{ width: 201px;
   height: 201px;}
 @media only screen and (max-width: 576px) {
-  .zoomit:hover  { transform: scale(1.1);}
+  .card:hover  { transform: scale(1.1);}
 
 }
 @media (min-width: 576px) and (max-width: 991px) {
