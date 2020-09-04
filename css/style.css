@@ -2037,12 +2037,12 @@ list-style: none;
   }
 }
   .import-img {
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
   }
 
   .padding-inner{
-    padding-left:30px;
+    padding-left:10px;
   }
 }
   .padding-outer{
