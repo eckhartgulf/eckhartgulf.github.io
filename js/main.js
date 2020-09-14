@@ -355,8 +355,14 @@ jQuery(document).ready(function($) {
 $(document).ready(function(){
   $(".fancybox1").fancybox({
         openEffect: "none",
-        closeEffect: "none"
+				closeEffect: "none"
 		});
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) 
+			{
+					$(".fancybox1").fancybox({
+								padding: 0 
+						});
+			}
 		    
     $(".zoom1").hover(function(){
 		
