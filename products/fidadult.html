@@ -85,25 +85,21 @@
       <div class="container">
         <div class="row marketing">
           <div class="col-lg-6 col-md-12 col-sm-12 mr-auto gallery">
-            <img id="zoom_03" src="small/adult1.jpg" data-zoom-image="large/adult1.jpg"/>
+            <img id="zoom_03" src="small/N S1.jpg" data-zoom-image="large/N S1.jpg"/>
 
             <div id="gallery_01" >
              
-              <a href="#" class="elevatezoom-gallery active1" data-image="small/adult1.jpg" data-zoom-image="large/adult1.jpg">
-                <img src="thumb/adult1.jpg" />
+              <a id="img1" href="#" class="elevatezoom-gallery active1" data-image="small/N S1.jpg" data-zoom-image="large/N S1.jpg" onclick="img1Function()">
+                <img id="thumb1" src="thumb/N S1.jpg" />
               </a>
             
-              <a href="#" class="elevatezoom-gallery" data-image="small/adult2.jpg" data-zoom-image="large/adult2.jpg">
-                <img src="thumb/adult2.jpg" />
+              <a  id="img2" href="#" class="elevatezoom-gallery" data-image="small/N S2.jpg" data-zoom-image="large/N S2.jpg" onclick="img2Function()">
+                <img id="thumb2"src="thumb/N S2.jpg" />
               </a>
             
-              <a href="#" class="elevatezoom-gallery" data-image="small/adult3.jpg" data-zoom-image="large/adult3.jpg">
-                <img src="thumb/adult3.jpg" />
-              </a>
-            
-              <a href="#" class="elevatezoom-gallery" data-image="small/adult4.jpg" data-zoom-image="large/adult4.jpg">
-                <img src="thumb/adult4.jpg" />
-              </a>            
+              <a id="img3" href="#" class="elevatezoom-gallery" data-image="small/N S3.jpg" data-zoom-image="large/N S3.jpg" onclick="img3Function()">
+                <img id="thumb3" src="thumb/N S3.jpg" />
+              </a>       
             </div>
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 add-padding">
@@ -128,7 +124,17 @@
                 </p>
                 </div>
                 <div class="tab-pane fade show active" id="pills-profile">
-                  <p>&nbsp &nbsp
+                  <p>
+                    &nbsp &nbsp
+                    <label for="cars">Choose a size:</label>
+                      <select name="sizelist" form="sizeform" 
+                        onChange="jsFunction()" id="selectOpt">
+                        <option value="s">Small</option>
+                        <option value="m">Medium</option>
+                        <option value="l">Large</option>
+                        <option value="xl">Extra Large</option>
+                      </select>
+                    <br>&nbsp &nbsp
                     <img 
                         src="../fonts/flaticons/svg/008-nose.svg" 
                         alt=""
@@ -239,6 +245,7 @@
           imageCrossfade: true,
           loadingIcon: 'https://www.elevateweb.co.uk/spinner.gif'
       });
+
     if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       //pass the images to Fancybox
       $("#zoom_03").bind("click", function(e) {
@@ -246,7 +253,318 @@
           $.fancybox(ez.getGalleryList());
             return false;
       });
+      $("#zoom_03").data('zoom-image', 'newURL').elevateZoom({
+        responsive: true,
+        zoomType: "lens", 
+        containLensZoom: true
+      }); 
     }
+/*
+    function img1Function() 
+    {
+      var myselect = document.getElementById("selectOpt");
+      var zoomElement = $('#zoom_03');
+
+      // destroy old one
+      zoomElement.removeData('zoom-image');
+      $('.zoomContainer').remove();
+
+      if("xl" == myselect.options[myselect.selectedIndex].value)
+      {
+        // set new one
+        zoomElement.attr('data-zoom-image', "large/N XL1.jpg");        
+        zoomElement.attr('src', $(this).data('small/N XL1.jpg"'));
+      }       
+      if("l" == myselect.options[myselect.selectedIndex].value)
+      {        // set new one
+        zoomElement.attr('data-zoom-image', "large/N L1.jpg");
+        zoomElement.attr('src', "small/N L1.jpg");
+      }
+      if("m" == myselect.options[myselect.selectedIndex].value)
+      {
+        // set new one
+        zoomElement.attr('data-zoom-image', "large/N M1.jpg");      
+        zoomElement.attr('src', $(this).data('small/N M1.jpg"'));
+      }
+      if("s" == myselect.options[myselect.selectedIndex].value)
+      {
+        // set new one
+        zoomElement.attr('data-zoom-image', "large/N S1.jpg");
+        zoomElement.attr('src', "small/N S1.jpg");
+      }          
+      // reinitial elevatezoom
+      zoomElement.elevateZoom();
+    }
+*/
+  function img1Function() 
+  {
+  
+      var ez =   $('#zoom_03').data('elevateZoom');
+      var myselect = document.getElementById("selectOpt");
+
+      if("s" == myselect.options[myselect.selectedIndex].value)
+      {
+        ez.swaptheimage('small/N S1.jpg', 'large/N S1.jpg');
+      }
+
+      if("l" == myselect.options[myselect.selectedIndex].value)
+      {
+        ez.swaptheimage('small/N L1.jpg', 'large/N L1.jpg');
+      }
+
+      if("m" == myselect.options[myselect.selectedIndex].value)
+      {
+        ez.swaptheimage('small/N M1.jpg', 'large/N M1.jpg');
+      }
+
+      if("xl" == myselect.options[myselect.selectedIndex].value)
+      {
+        ez.swaptheimage('small/N XL1.jpg', 'large/N XL1.jpg');
+      }
+      
+  }
+
+  function img2Function() 
+  {  
+      var ez =   $('#zoom_03').data('elevateZoom');
+      var myselect = document.getElementById("selectOpt");
+
+      if("s" == myselect.options[myselect.selectedIndex].value)
+      {
+        ez.swaptheimage('small/N S2.jpg', 'large/N S2.jpg');
+      }
+
+      if("l" == myselect.options[myselect.selectedIndex].value)
+      {
+        ez.swaptheimage('small/N L2.jpg', 'large/N L2.jpg');
+      }
+
+      if("m" == myselect.options[myselect.selectedIndex].value)
+      {
+        ez.swaptheimage('small/N M2.jpg', 'large/N M2.jpg');
+      }
+
+      if("xl" == myselect.options[myselect.selectedIndex].value)
+      {
+        ez.swaptheimage('small/N XL2.jpg', 'large/N XL.jpg');
+      }
+      
+    }
+
+  function img3Function() 
+  {
+  
+      var ez =   $('#zoom_03').data('elevateZoom');
+      var myselect = document.getElementById("selectOpt");
+
+      if("s" == myselect.options[myselect.selectedIndex].value)
+      {
+        ez.swaptheimage('small/N S3.jpg', 'large/N S3.jpg');
+      }
+
+      if("l" == myselect.options[myselect.selectedIndex].value)
+      {
+        ez.swaptheimage('small/N L3.jpg', 'large/N L3.jpg');
+      }
+
+      if("m" == myselect.options[myselect.selectedIndex].value)
+      {
+        ez.swaptheimage('small/N M3.jpg', 'large/N M3.jpg');
+      }
+
+      if("xl" == myselect.options[myselect.selectedIndex].value)
+      {
+        ez.swaptheimage('small/N XL3.jpg', 'large/N XL3.jpg');
+      }
+      
+    }
+/*
+    function img3Function() 
+    {
+      var myselect = document.getElementById("selectOpt");
+      var zoomElement = $('#zoom_03');
+
+      // destroy old one
+      zoomElement.removeData('zoom-image');
+      $('.zoomContainer').remove();
+
+      if("xl" == myselect.options[myselect.selectedIndex].value)
+      {
+        // set new one
+        zoomElement.attr('data-zoom-image', "large/N XL3.jpg");       
+        zoomElement.attr('src', $(this).data('small/N XL3.jpg"'));
+      }       
+      if("l" == myselect.options[myselect.selectedIndex].value)
+      {
+
+        // set new one
+        zoomElement.attr('data-zoom-image', "large/N L3.jpg");
+        zoomElement.attr('src', "small/N L3.jpg");
+      }
+      if("m" == myselect.options[myselect.selectedIndex].value)
+      {
+        // set new one
+        zoomElement.attr('data-zoom-image', "large/N M3.jpg");
+        zoomElement.attr('src', "small/N M3.jpg");
+      }
+      if("s" == myselect.options[myselect.selectedIndex].value)
+      {
+        // set new one
+        zoomElement.attr('data-zoom-image', "large/N S3.jpg");
+        zoomElement.attr('src', "small/N S3.jpg");
+      }          
+      // reinitial elevatezoom
+      zoomElement.elevateZoom();
+
+    }
+
+    function jsFunction(){
+      var myselect = document.getElementById("selectOpt");
+      var zoomElement = $('#zoom_03');
+      // destroy old one
+      zoomElement.removeData('zoom-image');
+      $('.zoomContainer').remove();
+
+      var thumb1Element = $('#thumb1');
+      var thumb2Element = $('#thumb2');
+      var thumb3Element = $('#thumb3');
+
+      var img1Element = $('#img1');
+      var img2Element = $('#img2');
+      var img3Element = $('#img3');
+
+      if("s" == myselect.options[myselect.selectedIndex].value)
+      {
+        zoomElement.attr('data-zoom-image', "large/N S1.jpg");
+        zoomElement.attr('src', "small/N S1.jpg");
+
+        thumb1Element.attr('src', "thumb/N S1.jpg");
+        thumb2Element.attr('src', "thumb/N S2.jpg");
+        thumb3Element.attr('src', "thumb/N S3.jpg");
+        img1Element.attr('data-image', "small/N S1.jpg");
+        img2Element.attr('data-image', "small/N S2.jpg");
+        img3Element.attr('data-image', "small/N S3.jpg");
+      }
+
+      if("l" == myselect.options[myselect.selectedIndex].value)
+      {
+        zoomElement.attr('data-zoom-image', "large/N L1.jpg");
+        zoomElement.attr('src', "small/N L1.jpg");
+
+        thumb1Element.attr('src', "thumb/N L1.jpg");
+        thumb2Element.attr('src', "thumb/N L2.jpg");
+        thumb3Element.attr('src', "thumb/N L3.jpg");
+        img1Element.attr('data-image', "small/N L1.jpg");
+        img2Element.attr('data-image', "small/N L2.jpg");
+        img3Element.attr('data-image', "small/N L3.jpg");
+      }
+
+      if("m" == myselect.options[myselect.selectedIndex].value)
+      {
+        zoomElement.attr('data-zoom-image', "large/N M1.jpg");
+        zoomElement.attr('src', "small/N M1.jpg");
+
+        thumb1Element.attr('src', "thumb/N M1.jpg");
+        thumb2Element.attr('src', "thumb/N M2.jpg");
+        thumb3Element.attr('src', "thumb/N M3.jpg");
+        img1Element.attr('data-image', "small/N M1.jpg");
+        img2Element.attr('data-image', "small/N M2.jpg");
+        img3Element.attr('data-image', "small/N M3.jpg");
+      }
+
+      if("xl" == myselect.options[myselect.selectedIndex].value)
+      {
+        zoomElement.attr('data-zoom-image', "large/N XL1.jpg");
+        zoomElement.attr('src', "small/N XL1.jpg");
+
+        thumb1Element.attr('src', "thumb/N XL1.jpg");
+        thumb2Element.attr('src', "thumb/N XL2.jpg");
+        thumb3Element.attr('src', "thumb/N XL3.jpg");
+        img1Element.attr('data-image', "small/N XL1.jpg");
+        img2Element.attr('data-image', "small/N XL2.jpg");
+        img3Element.attr('data-image', "small/N XL3.jpg");
+      }
+
+      // reinitial elevatezoom
+      zoomElement.elevateZoom();
+      $('#gallery_01 a').removeClass('active1').eq(0).addClass('active1');	
+
+    }
+*/
+
+    function jsFunction(){
+      var myselect = document.getElementById("selectOpt");
+      var zoomElement = $('#zoom_03');
+      // destroy old one
+      zoomElement.removeData('zoom-image');
+      $('.zoomContainer').remove();
+
+      var thumb1Element = $('#thumb1');
+      var thumb2Element = $('#thumb2');
+      var thumb3Element = $('#thumb3');
+
+      var img1Element = $('#img1');
+      var img2Element = $('#img2');
+      var img3Element = $('#img3');
+
+      if("s" == myselect.options[myselect.selectedIndex].value)
+      {
+        zoomElement.attr('data-zoom-image', "large/N S1.jpg");
+        zoomElement.attr('src', "small/N S1.jpg");
+
+        thumb1Element.attr('src', "thumb/N S1.jpg");
+        thumb2Element.attr('src', "thumb/N S2.jpg");
+        thumb3Element.attr('src', "thumb/N S3.jpg");
+        img1Element.attr('data-image', "small/N S1.jpg");
+        img2Element.attr('data-image', "small/N S2.jpg");
+        img3Element.attr('data-image', "small/N S3.jpg");
+      }
+
+      if("l" == myselect.options[myselect.selectedIndex].value)
+      {
+        zoomElement.attr('data-zoom-image', "large/N L1.jpg");
+        zoomElement.attr('src', "small/N L1.jpg");
+
+        thumb1Element.attr('src', "thumb/N L1.jpg");
+        thumb2Element.attr('src', "thumb/N L2.jpg");
+        thumb3Element.attr('src', "thumb/N L3.jpg");
+        img1Element.attr('data-image', "small/N L1.jpg");
+        img2Element.attr('data-image', "small/N L2.jpg");
+        img3Element.attr('data-image', "small/N L3.jpg");
+      }
+
+      if("m" == myselect.options[myselect.selectedIndex].value)
+      {
+        zoomElement.attr('data-zoom-image', "large/N M1.jpg");
+        zoomElement.attr('src', "small/N M1.jpg");
+
+        thumb1Element.attr('src', "thumb/N M1.jpg");
+        thumb2Element.attr('src', "thumb/N M2.jpg");
+        thumb3Element.attr('src', "thumb/N M3.jpg");
+        img1Element.attr('data-image', "small/N M1.jpg");
+        img2Element.attr('data-image', "small/N M2.jpg");
+        img3Element.attr('data-image', "small/N M3.jpg");
+      }
+
+      if("xl" == myselect.options[myselect.selectedIndex].value)
+      {
+        zoomElement.attr('data-zoom-image', "large/N XL1.jpg");
+        zoomElement.attr('src', "small/N XL1.jpg");
+
+        thumb1Element.attr('src', "thumb/N XL1.jpg");
+        thumb2Element.attr('src', "thumb/N XL2.jpg");
+        thumb3Element.attr('src', "thumb/N XL3.jpg");
+        img1Element.attr('data-image', "small/N XL1.jpg");
+        img2Element.attr('data-image', "small/N XL2.jpg");
+        img3Element.attr('data-image', "small/N XL3.jpg");
+      }
+
+      // reinitial elevatezoom
+      zoomElement.elevateZoom();
+      $('#gallery_01 a').removeClass('active1').eq(0).addClass('active1');	
+
+    }
+
   </script>
 
 </body>
