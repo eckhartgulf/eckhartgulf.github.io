@@ -85,20 +85,20 @@
       <div class="container">
         <div class="row marketing">
           <div class="col-lg-6 col-md-12 col-sm-12 mr-auto gallery">
-            <img id="zoom_03" src="small/N XL1.jpg" data-zoom-image="large/N XL1.jpg"/>
+            <img id="zoom_03" src="small/N L1.jpg" data-zoom-image="large/N L1.jpg"/>
 
             <div id="gallery_01" >
              
-              <a id="img1" href="#" class="elevatezoom-gallery active1" data-image="small/N XL1.jpg" data-zoom-image="large/N XL1.jpg" onclick="img1Function()">
-                <img id="thumb1" src="thumb/N XL1.jpg" />
+              <a id="img1" href="#" class="elevatezoom-gallery active1" data-image="small/N L1.jpg" data-zoom-image="large/N L1.jpg" 
+                <img id="thumb1" src="thumb/N L1.jpg" />
               </a>
             
-              <a  id="img2" href="#" class="elevatezoom-gallery" data-image="small/N XL2.jpg" data-zoom-image="large/N XL2.jpg" onclick="img2Function()">
-                <img id="thumb2"src="thumb/N XL2.jpg" />
+              <a  id="img2" href="#" class="elevatezoom-gallery" data-image="small/N L2.jpg" data-zoom-image="large/N L2.jpg" >
+                <img id="thumb2"src="thumb/N L2.jpg" />
               </a>
             
-              <a id="img3" href="#" class="elevatezoom-gallery" data-image="small/N XL3.jpg" data-zoom-image="large/N XL3.jpg" onclick="img3Function()">
-                <img id="thumb3" src="thumb/N XL3.jpg" />
+              <a id="img3" href="#" class="elevatezoom-gallery" data-image="small/N L3.jpg" data-zoom-image="large/N L3.jpg" >
+                <img id="thumb3" src="thumb/N L3.jpg" />
               </a>       
             </div>
           </div>
@@ -130,8 +130,8 @@
                       <select id="selectOpt" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
                         <option value="fidadults.html">Small</option>
                         <option value="fidadultm.html">Medium</option>
-                        <option value="fidadultl.html">Large</option>
-                        <option value="" selected="selected">Extra Large</option>
+                        <option value="" selected="selected">Large</option>
+                        <option value="fidadulxl.html">Extra Large</option>
                       </select>
                     <br>&nbsp &nbsp
                     <img 
@@ -258,231 +258,7 @@
         containLensZoom: true
       }); 
     }
-/*
-    function img1Function() 
-    {
-      var myselect = document.getElementById("selectOpt");
-      var zoomElement = $('#zoom_03');
 
-      // destroy old one
-      zoomElement.removeData('zoom-image');
-      $('.zoomContainer').remove();
-
-      if("xl" == myselect.options[myselect.selectedIndex].value)
-      {
-        // set new one
-        zoomElement.attr('data-zoom-image', "large/N XL1.jpg");        
-        zoomElement.attr('src', $(this).data('small/N XL1.jpg"'));
-      }       
-      if("l" == myselect.options[myselect.selectedIndex].value)
-      {        // set new one
-        zoomElement.attr('data-zoom-image', "large/N L1.jpg");
-        zoomElement.attr('src', "small/N L1.jpg");
-      }
-      if("m" == myselect.options[myselect.selectedIndex].value)
-      {
-        // set new one
-        zoomElement.attr('data-zoom-image', "large/N M1.jpg");      
-        zoomElement.attr('src', $(this).data('small/N M1.jpg"'));
-      }
-      if("s" == myselect.options[myselect.selectedIndex].value)
-      {
-        // set new one
-        zoomElement.attr('data-zoom-image', "large/N S1.jpg");
-        zoomElement.attr('src', "small/N S1.jpg");
-      }          
-      // reinitial elevatezoom
-      zoomElement.elevateZoom();
-    }
-
-  function img1Function() 
-  {
-  
-      var ez =   $('#zoom_03').data('elevateZoom');
-      var myselect = document.getElementById("selectOpt");
-
-      if("s" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N S1.jpg', 'large/N S1.jpg');
-      }
-
-      if("l" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N L1.jpg', 'large/N L1.jpg');
-      }
-
-      if("m" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N M1.jpg', 'large/N M1.jpg');
-      }
-
-      if("xl" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N XL1.jpg', 'large/N XL1.jpg');
-      }
-      
-  }
-
-  function img2Function() 
-  {  
-      var ez =   $('#zoom_03').data('elevateZoom');
-      var myselect = document.getElementById("selectOpt");
-
-      if("s" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N S2.jpg', 'large/N S2.jpg');
-      }
-
-      if("l" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N L2.jpg', 'large/N L2.jpg');
-      }
-
-      if("m" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N M2.jpg', 'large/N M2.jpg');
-      }
-
-      if("xl" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N XL2.jpg', 'large/N XL.jpg');
-      }
-      
-    }
-
-  function img3Function() 
-  {
-  
-      var ez =   $('#zoom_03').data('elevateZoom');
-      var myselect = document.getElementById("selectOpt");
-
-      if("s" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N S3.jpg', 'large/N S3.jpg');
-      }
-
-      if("l" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N L3.jpg', 'large/N L3.jpg');
-      }
-
-      if("m" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N M3.jpg', 'large/N M3.jpg');
-      }
-
-      if("xl" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N XL3.jpg', 'large/N XL3.jpg');
-      }
-      
-    }
-/*
-    function img3Function() 
-    {
-      var myselect = document.getElementById("selectOpt");
-      var zoomElement = $('#zoom_03');
-
-      // destroy old one
-      zoomElement.removeData('zoom-image');
-      $('.zoomContainer').remove();
-
-      if("xl" == myselect.options[myselect.selectedIndex].value)
-      {
-        // set new one
-        zoomElement.attr('data-zoom-image', "large/N XL3.jpg");       
-        zoomElement.attr('src', $(this).data('small/N XL3.jpg"'));
-      }       
-      if("l" == myselect.options[myselect.selectedIndex].value)
-      {
-
-        // set new one
-        zoomElement.attr('data-zoom-image', "large/N L3.jpg");
-        zoomElement.attr('src', "small/N L3.jpg");
-      }
-      if("m" == myselect.options[myselect.selectedIndex].value)
-      {
-        // set new one
-        zoomElement.attr('data-zoom-image', "large/N M3.jpg");
-        zoomElement.attr('src', "small/N M3.jpg");
-      }
-      if("s" == myselect.options[myselect.selectedIndex].value)
-      {
-        // set new one
-        zoomElement.attr('data-zoom-image', "large/N S3.jpg");
-        zoomElement.attr('src', "small/N S3.jpg");
-      }          
-      // reinitial elevatezoom
-      zoomElement.elevateZoom();
-
-    }
-*/
-
-/*
-    function jsFunction(){
-      var myselect = document.getElementById("selectOpt");
-      var ez =   $('#zoom_03').data('elevateZoom');
-      $.removeData(image, 'elevateZoom');
-
-      var thumb1Element = $('#thumb1');
-      var thumb2Element = $('#thumb2');
-      var thumb3Element = $('#thumb3');
-
-      var img1Element = $('#img1');
-      var img2Element = $('#img2');
-      var img3Element = $('#img3');
-
-      if("s" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N S1.jpg', 'large/N S1.jpg');
-
-        thumb1Element.attr('src', "thumb/N S1.jpg");
-        thumb2Element.attr('src', "thumb/N S2.jpg");
-        thumb3Element.attr('src', "thumb/N S3.jpg");
-        img1Element.attr('data-image', "small/N S1.jpg");
-        img2Element.attr('data-image', "small/N S2.jpg");
-        img3Element.attr('data-image', "small/N S3.jpg");
-      }
-
-      if("l" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N L1.jpg', 'large/N L1.jpg');
-
-        thumb1Element.attr('src', "thumb/N L1.jpg");
-        thumb2Element.attr('src', "thumb/N L2.jpg");
-        thumb3Element.attr('src', "thumb/N L3.jpg");
-        img1Element.attr('data-image', "small/N L1.jpg");
-        img2Element.attr('data-image', "small/N L2.jpg");
-        img3Element.attr('data-image', "small/N L3.jpg");
-      }
-
-      if("m" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N M1.jpg', 'large/N M1.jpg');
-
-        thumb1Element.attr('src', "thumb/N M1.jpg");
-        thumb2Element.attr('src', "thumb/N M2.jpg");
-        thumb3Element.attr('src', "thumb/N M3.jpg");
-        img1Element.attr('data-image', "small/N M1.jpg");
-        img2Element.attr('data-image', "small/N M2.jpg");
-        img3Element.attr('data-image', "small/N M3.jpg");
-      }
-
-      if("xl" == myselect.options[myselect.selectedIndex].value)
-      {
-        ez.swaptheimage('small/N XL1.jpg', 'large/N XL1.jpg');
-
-        thumb1Element.attr('src', "thumb/N XL1.jpg");
-        thumb2Element.attr('src', "thumb/N XL2.jpg");
-        thumb3Element.attr('src', "thumb/N XL3.jpg");
-        img1Element.attr('data-image', "small/N XL1.jpg");
-        img2Element.attr('data-image', "small/N XL2.jpg");
-        img3Element.attr('data-image', "small/N XL3.jpg");
-      }
-      $('#gallery_01 a').removeClass('active1').eq(0).addClass('active1');	
-
-    }
-*/
   </script>
 
 </body>
